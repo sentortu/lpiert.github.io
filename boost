@@ -1,0 +1,20 @@
+www.boost.org
+
+bash:
+	tar -zxvf   boost_version.tar.bz
+
+	cd  boost_version
+	./bootstrap.sh
+	sudo ./b2 install  (/usr/local/include下会产生boost的头文件，/usr/local/lib下面会产生boost库)
+	(切换到cd /etc/profile.d目录下 ,touch boost.sh)
+	
+	boost.sh :
+		（解压的路径及版本号 例如:/home/lpiert/boost_1_68_0）
+		#!/bin/sh
+		BOOST_ROOT=/home/lpiert/boost_1_68_0
+		BOOST_INCLUDE=/usr/local/include/boost
+		BOOST_LIB=/usr/local/lib
+		export BOOST_INCLUDE BOOST_LIB BOOST_ROOT
+	
+	sudo chmod +x boost.sh，执行source boost.sh   
+
