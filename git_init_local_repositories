@@ -1,0 +1,22 @@
+mkdir  lpiert
+
+cd lpiert
+
+git init 
+
+touch  readme
+
+git add readme
+
+git commit -m "init"
+
+git remote add origin https://github.com/lpiert/lpiert.github.io.git 
+
+if error:
+   git pulll origin master --allow-unrelated-histories 
+else:
+  git pull origin master 
+
+git push origin master 
+
+
