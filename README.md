@@ -3,8 +3,7 @@ this is a note use  for Temporary storage ,Here are some links to the answers to
 <html lang="cn">
 <head>
     <meta charset="UTF-8">
-    <title>html tag python demo</title>
-    <link href = "https://www.baidu.com">
+    <title>Python</title>
 </head>
 <body>
     <h1>学习爬虫的过程</h1>
