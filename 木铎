@@ -37,3 +37,12 @@ muduo是静态链接的C++程序库，使用muduo库的时候，只需要设置�
 
 注意：如果要在编译程序的时候不带include和lib的路径，直接执行拷贝cp -r muduo /usr/include/ 将build/debug-install/include/muduo拷贝到/usr/include下。
   和 cp * /usr/lib把build/debug-install/lib下的库拷贝到/usr/lib下
+  
+
+
+error：
+Unable to find the Boost header files. Please set BOOST_ROOT to the root..............
+
+measure:
+
+sudo apt-get install cmake libblkid-dev e2fslibs-dev libboost-all-dev libaudit-dev
