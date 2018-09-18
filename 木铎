@@ -46,3 +46,7 @@ Unable to find the Boost header files. Please set BOOST_ROOT to the root........
 measure:
 
 sudo apt-get install cmake libblkid-dev e2fslibs-dev libboost-all-dev libaudit-dev
+
+
+
+https://github.com/lpiert/lpiert.github.io/blob/master/image/muduo_installed_demo.png
