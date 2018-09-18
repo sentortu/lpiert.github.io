@@ -4,6 +4,10 @@ cd lpiert
 
 git init 
 
+git config --global user.name ""
+
+git config --global user.email ""
+
 touch  readme
 
 git add readme
