@@ -10,7 +10,7 @@
 ---
 #### 简介
 
-![image](https://github.com/lpiert/lpiert.github.io/blob/master/image/installing_boost.png)
+![image](ttps://github.com/lpiert/lpiert.github.io/blob/master/image/c%2B%2B%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D.png)
 
 
 >    在C++中，内存分成5个区，他们分别是堆、栈、自由存储区、全局/静态存储区和常量存储区。
