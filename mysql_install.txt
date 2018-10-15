@@ -1,0 +1,4 @@
+https://blog.csdn.net/we_are_the_world_123/article/details/79230537
+
+
+powershell  Â·¾¶ÐèÒª ' '   set password = password("password");
