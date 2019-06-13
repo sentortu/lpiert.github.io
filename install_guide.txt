@@ -1,0 +1,45 @@
+#.install boost.
+1.using VS2010(or other version) command line to run tools\build\bootstrap.bat and produce b2.exe and bjam.exe.
+2.copy b2.exe to boost_1.57.0.
+3.run b2.exe to start setup, but you should specify parameters.
+4.script like this:
+  vc2010 "b2 --build-dir=~build_temp toolset=msvc-10.0 variant=debug,release"
+  vc2013 "b2 --build-dir=~build_temp toolset=msvc-12.0 variant=debug,release threading=multi"
+  vc2017 "b2 --build-dir=~build_temp toolset=msvc-14.1 address-model=64 variant=debug,release threading=multi"
+  it will create "boost_1.57.0\stage\lib" directory with all lib complete compiled in.
+  it will also create "boost_1.57.0\_build" directory to save all mid temp files.
+  default it will create libs with "mutilthread-static-lib" mode.
+  installing detail reference "boost_1.57.0\index.html"
+6.copy "boost_1.57.0\boost" that include all "include header files".
+7.copy "boost_1.57.0\stage\lib" that include all "lib files".
+8.copy "lib" directory in "boost" directory.
+
+#.install ace.
+1.open msvc-12.0(vs2013) and open ACE_wrappers_vc12.sln solution.
+2.reset all project setting:
+  1)Output Directory: ..\lib\VC12\$(Configuration)\.
+  2)Target Name: $(ProjectName)
+  3)Output File: $(OutDir)$(TargetName)$(TargetExt)
+  4)General\Additional Library Directories: .;..\lib
+  5)Advanced\Import Libaray: $(OutDir)$(TargetName).lib.
+  6)Generate Program Database File: $(OutDir)\$(TargetName).pdb
+3.build all project.
+4.copy "lib" directory in "ace" directory.
+
+
+#.install protobuf.
+1.read "D:\code\protobuf-2.6.1\vsprojects\readme.txt".
+
+#.install zlib.
+1.extract ".h" file: copy all ".h" files in the zlib_1.2.8 to "inc dir" which will be included in your app.
+2.build ".lib" file: 
+  1) open vc project: "D:\code\zlib_1.2.8\contrib\vstudio\vc10\zlibvc.sln."
+  2) notice the compile options: md\mdd\mt\mtd
+  3) build zlibvc project if you want to link lib as a dll.
+  4) build zlibstat project if you want to link lib as a static lib.
+  5) copy lib and dll to your "lib dir" which will be imported in your app.
+3.we defaultly use static lib link mode, and use the auto-link techology.
+
+#.install zeromq
+1.download latest version: "https://github.com/zeromq/zeromq4-x/tree/v4.0.5"
+
