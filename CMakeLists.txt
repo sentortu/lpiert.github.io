@@ -1,39 +1,35 @@
-# ÉèÖÃcmake°æ±¾·¶Î§
+# è®¾ç½®cmakeç‰ˆæœ¬èŒƒå›´
 cmake_minimum_required(VERSION 2.0...3.5)
-# ÉèÖÃ¹¤³ÌÃû
+# è®¾ç½®å·¥ç¨‹å
 project(LangPack C CXX)
-# Êä³öÉèÖÃ
+# è¾“å‡ºè®¾ç½®
 set(LangPack_SOURCE_DIR ${CMAKE_CURRENT_LIST_DIR}/../../../src/LangPack)
-set(LangPack_BINARY_DIR ${LangPack_SOURCE_DIR})
+set(LangPack_BINARY_DIR ${LangPack_SOURCE_DIR}/sln)
 set(LIBRARY_OUTPUT_PATH ${LangPack_SOURCE_DIR}/../../bin/vc141/LangPack)
-# ¹¤³ÌÎÄ¼şÊä³öÂ·¾¶ÉèÖÃ
+# å·¥ç¨‹æ–‡ä»¶è¾“å‡ºè·¯å¾„è®¾ç½®
 set(CMAKE_BUILD_RPATH ${CMAKE_CURRENT_LIST_DIR}/sln)
 # where your are run cmake where create .sln...
-# ´òÓ¡»ù±¾ĞÅÏ¢
+# æ‰“å°åŸºæœ¬ä¿¡æ¯
 message(STATUS "source_dir:${LangPack_SOURCE_DIR}")
-# ÉèÖÃÔ¤´¦Àí
+# è®¾ç½®é¢„å¤„ç†
 add_definitions(-ECO_NO_PROTOBUF)
-# ÉèÖÃapi
+# è®¾ç½®api
 set(api_dir ${LangPack_SOURCE_DIR}/../../../api)
 set(contrib_dir ${LangPack_SOURCE_DIR}/../../../../../contrib)
 set(eco_lib_dir ${api_dir}/lib_vc141/Debug)
 set(boost_lib_dir ${contrib_dir}/boost/lib_vc141)
 set(proto_lib_dir ${contrib_dir}/google/protobuf/lib_vc141/debug)
-# °üº¬Í·ÎÄ¼ş
+# åŒ…å«å¤´æ–‡ä»¶
 include_directories(${LangPack_SOURCE_DIR})
 include_directories(${api_dir})
 include_directories(${contrib_dir})
-# ÉèÖÃÁ´½Ó¿âÍ·ÎÄ¼ş
+# è®¾ç½®é“¾æ¥åº“å¤´æ–‡ä»¶
 link_directories(${eco_lib_dir})
 link_directories(${boost_lib_dir})
 link_directories(${proto_lib_dir})
-# Ìí¼Óµ±Ç°£¨CMakeSourceDir£©Ä¿Â¼ÏÂËùÓĞÔ´ÎÄ¼ş
+# æ·»åŠ å½“å‰ï¼ˆCMakeSourceDirï¼‰ç›®å½•ä¸‹æ‰€æœ‰æºæ–‡ä»¶
 aux_source_directory(${LangPack_SOURCE_DIR}/. src_dir)
-# ÉèÖÃÉú³Éshared dll
-add_library(LangPack SHARED  ${src_dir})
-# Á´½Ó¶¯Ì¬¿â
-target_link_libraries(LangPack eco)
-# ÉèÖÃÎÄ¼ş·Ö×é
+# è®¾ç½®æ–‡ä»¶åˆ†ç»„
 FILE(GLOB  SRC_SOURCE ${LangPack_SOURCE_DIR}/*.cpp)
 FILE(GLOB  INC_HEAD ${LangPack_SOURCE_DIR}/*.h)
 FILE(GLOB  LIB_HEAD ${api_dir}/lang/*.h)
@@ -41,6 +37,10 @@ source_group("src" FILES ${SRC_SOURCE})
 source_group("inc" FILES ${INC_HEAD})
 source_group("lib\\lang" FILES ${LIB_HEAD})
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
+# è®¾ç½®ç”Ÿæˆshared dll
+add_library(LangPack SHARED  ${src_dir} ${INC_HEAD} ${LIB_HEAD})
+# é“¾æ¥åŠ¨æ€åº“
+target_link_libraries(LangPack eco)
 
 #[[
 set(ALLFILES 
