@@ -4,11 +4,7 @@ cmake_minimum_required(VERSION 2.0...3.5)
 project(LangPack C CXX)
 # 输出设置
 set(LangPack_SOURCE_DIR ${CMAKE_CURRENT_LIST_DIR}/../../../src/LangPack)
-set(LangPack_BINARY_DIR ${LangPack_SOURCE_DIR}/sln)
 set(LIBRARY_OUTPUT_PATH ${LangPack_SOURCE_DIR}/../../bin/vc141/LangPack)
-# 工程文件输出路径设置
-set(CMAKE_BUILD_RPATH ${CMAKE_CURRENT_LIST_DIR}/sln)
-# where your are run cmake where create .sln...
 # 打印基本信息
 message(STATUS "source_dir:${LangPack_SOURCE_DIR}")
 # 设置预处理
@@ -37,11 +33,13 @@ source_group("src" FILES ${SRC_SOURCE})
 source_group("inc" FILES ${INC_HEAD})
 source_group("lib\\lang" FILES ${LIB_HEAD})
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
+
 # 设置生成shared dll
 add_library(LangPack SHARED  ${src_dir} ${INC_HEAD} ${LIB_HEAD})
 # 链接动态库
 target_link_libraries(LangPack eco)
 
+#以下方法生成组可以应付文件过多时
 #[[
 set(ALLFILES 
 	${src_dir}
@@ -58,4 +56,12 @@ foreach(FILE ${ALL_FILES})
   endif()
   source_group("${GROUP}" FILES "${FILE}")
 endforeach()
+]]
+
+
+#cmake --help
+#[[
+# 指定输出位置 
+cmake  CMakeLists.txt -B  ./sln    在当前文件夹下(CMakeLists.txt 所在的文件夹下，其他路径相对设置)cmd  -> cmake  CMakeLists.txt -B  ./sln  生成工程相关文件即在 sln 下。
+#此需求尝试在CMakeLists.txt 中配置暂未寻到方法,无果。
 ]]
