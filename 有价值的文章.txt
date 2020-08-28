@@ -27,3 +27,4 @@ https://kevien.github.io/2017/08/22/OllyDbg%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/
 https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/others/
 https://www.youtube.com/watch?v=ZJTWFpxqtPk
 https://medium.com/@hackison/how-to-install-kali-linux-in-usb-1682a4962c09
+https://blog.csdn.net/mars_xiaolei/article/details/83825447
