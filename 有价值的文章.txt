@@ -28,3 +28,4 @@ https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/othe
 https://www.youtube.com/watch?v=ZJTWFpxqtPk
 https://medium.com/@hackison/how-to-install-kali-linux-in-usb-1682a4962c09
 https://blog.csdn.net/mars_xiaolei/article/details/83825447
+https://thegeekpage.com/fix-internet-proxy-server-errors-in-windows-10/
