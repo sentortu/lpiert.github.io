@@ -30,3 +30,4 @@ https://medium.com/@hackison/how-to-install-kali-linux-in-usb-1682a4962c09
 https://blog.csdn.net/mars_xiaolei/article/details/83825447
 https://thegeekpage.com/fix-internet-proxy-server-errors-in-windows-10/
 https://segmentfault.com/a/1190000011483340
+https://blog.csdn.net/qq_28171461/article/details/89158327
