@@ -1,0 +1,9 @@
+download url:
+https://www.openssl.org/source/openssl-1.1.1i.tar.gz
+
+build:
+编译64位，则打开“适用于 VS 2017 的 x64 本机工具命令提示”；编译32位，则打开“x86 Native Tools Command Prompt for VS 2017”
+64位：perl Configure VC-WIN64A no-asm --prefix=your_path --openssldir=your_path；32位：perl Configure VC-WIN32 no-asm --prefix=your_path --openssldir=your_path
+nmake
+nmake test
+nmake install
