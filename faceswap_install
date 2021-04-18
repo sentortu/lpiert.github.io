@@ -1,0 +1,6 @@
+1.https://github.com/deepfakes/faceswap/blob/master/INSTALL.md  install step by step with manal.
+2.problem： File "D:\Anaconda3\envs\faceswap\lib\site-packages\cv2\__init__.py", line 5, in <module> from .cv2 import * ImportError: DLL load failed while importing cv2: The specified module could not be found. when you started
+fix: 
+https://forum.faceswap.dev/viewtopic.php?t=572
+detail:
+add features with windows: add and remove programs->Optional features->add a feature->media feature pack -> install ok-> restar.
