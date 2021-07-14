@@ -42,3 +42,4 @@ http://c.biancheng.net/view/1864.html
 https://www.freesion.com/article/58631291088/
 https://qwt.sourceforge.io/index.html
 https://www.qcustomplot.com/index.php/tutorials/basicplotting
+https://qmlbook.github.io/
