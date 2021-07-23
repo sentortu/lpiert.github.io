@@ -43,3 +43,6 @@ https://www.freesion.com/article/58631291088/
 https://qwt.sourceforge.io/index.html
 https://www.qcustomplot.com/index.php/tutorials/basicplotting
 https://qmlbook.github.io/
+https://www.eet-china.com/mp/a12641.html
+https://www.kdab.com/?s=Qt+principle
+https://zhuanlan.zhihu.com/p/47837673
