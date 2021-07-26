@@ -46,3 +46,5 @@ https://qmlbook.github.io/
 https://www.eet-china.com/mp/a12641.html
 https://www.kdab.com/?s=Qt+principle
 https://zhuanlan.zhihu.com/p/47837673
+https://www.shuzhiduo.com/
+http://blog.chinaunix.net/uid-26817066-id-5772313.html
